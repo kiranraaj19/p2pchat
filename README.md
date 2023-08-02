@@ -28,3 +28,4 @@ Demo: https://drive.google.com/file/d/17pk75MJ0b4QUCJQBOgiQ6YqzoUe567a9/view?usp
 - [X] Hyperstore to store messages
 - [ ] Reflection of messages in React frontend (Have to fix, temporary fix: console)
 - [X] Deployment
+- [ ] UI

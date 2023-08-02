@@ -11,7 +11,7 @@ goodbye(() => swarm.destroy())
 
 const express = require('express')
 const app = express()
-const port = 5000
+const port = process.env.PORT || 3000;
 
 // middleware
 app.use(cors());
@@ -85,6 +85,6 @@ app.post("/connect", (req,res) => {
 //   console.log('joined topic:', b4a.toString(topic, 'hex'))
 // })
 
-app.listen(5000, () => {
-  console.log("Server started on port 5000")
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`)
 })

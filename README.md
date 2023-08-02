@@ -24,4 +24,4 @@ Simplex communication from react to cli (for now).
 - [X] P2P Communication
 - [X] Hyperstore to store messages
 - [ ] Reflection of messages in React frontend (Have to fix, temporary fix: console)
-- [ ] Deployment
+- [X] Deployment

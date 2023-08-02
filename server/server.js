@@ -1,4 +1,5 @@
 const Hyperswarm = require('hyperswarm');
+const Hypercore = require('hypercore');
 const goodbye = require('graceful-goodbye');
 const crypto = require('crypto');
 const b4a = require('b4a');
@@ -21,16 +22,30 @@ const conns = []
 
 const messages = []
 
+const core = new Hypercore('./directory');
+
 swarm.on('connection', conn => {
   const name = b4a.toString(conn.remotePublicKey, 'hex')
   console.log('* got a connection from:', name, '*')
   conns.push(conn)
   conn.once('close', () => conns.splice(conns.indexOf(conn), 1))
-  conn.on('data', data => {messages.push(`${name}: ${data}`); console.log(`${name}: ${data}`);})
+  conn.on('data', data => {core.append(Buffer.from(`${name}: ${data}`)); console.log(`${name}: ${data}`);})
 })
 
+app.get('/', (req,res) => {
+  res.json("Working");
+})
 
-app.get('/getmessages', (req,res) => {
+app.get('/getmessages', async (req,res) => {
+  const fullStream = core.createReadStream()
+
+const messages = []
+
+const decoder = new TextDecoder('utf-8');
+for await (const data of fullStream) {
+  messages.push('data:', decoder.decode(data))
+}
+
   res.json({"messages":messages})
 })
 

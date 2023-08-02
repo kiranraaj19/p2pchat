@@ -14,7 +14,7 @@ function App() {
   const handleConnection = (event) => {
     event.preventDefault();
 
-    fetch('http://localhost:5000/connect', {
+    fetch('https://p2pchat-api.vercel.app/connect', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ function App() {
 
   const sendMessage = (event) => {
     event.preventDefault();
-    fetch('http://localhost:5000/send', {
+    fetch('https://p2pchat-api.vercel.app/send', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -42,7 +42,7 @@ function App() {
 
   useEffect(() => {
       const interval = setInterval(() => {
-      axios.get("http://localhost:5000/getmessages")
+      axios.get("https://p2pchat-api.vercel.app/getmessages")
       .then(res => {setChat(res.data.messages);console.log(chat)})
   }, 3000);
   return () => clearInterval(interval);

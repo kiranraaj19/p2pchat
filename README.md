@@ -20,6 +20,8 @@ Simplex communication from react to cli (for now).
 2. Enter topic in https://p2pchat-frontend.vercel.app/ and connect with CLI instance
 3. Send messages through the website and messages will be reflected in CLI
 
+Demo: https://drive.google.com/file/d/17pk75MJ0b4QUCJQBOgiQ6YqzoUe567a9/view?usp=sharing
+
 # Functionalities/To Do
 - [X] Connect users by topic
 - [X] P2P Communication

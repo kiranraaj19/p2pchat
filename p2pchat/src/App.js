@@ -24,6 +24,7 @@ function App() {
       .then(
         res => {
           setConnected(true);
+          console.log("Connection: ",res);
         }
       )
   }

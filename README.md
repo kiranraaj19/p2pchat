@@ -2,12 +2,13 @@
 A Holepunch based p2p chat application
 
 # How to (Locally)
+1. Clone the repo and go to commit ID 393e510d658a3dabcc83321bf7c9fa77c6b58e7f
 1. Start node server from /server using ` npm run dev `
-2. Start react server from /p2pchat using `npm start`
-3. Click Join to create a publickey in console
-4. Use that console to chat from your cli (peer.mjs can be used to connect to the react instance) `node peer.mjs <remotePublicKey>`
-5. Start sending messages from react frontend
-6. Messages for react + node instance will be received in console.
+1. Start react server from /p2pchat using `npm start`
+1. Click Join to create a publickey in console
+1. Use that console to chat from your cli (peer.mjs can be used to connect to the react instance) `node peer.mjs <remotePublicKey>`
+1. Start sending messages from react frontend
+1. Messages for react + node instance will be received in console.
 
 Demo: https://drive.google.com/file/d/1OPlKycOoMYgsRdohr9IvCjI1yuxZDt93/view?usp=sharing
 

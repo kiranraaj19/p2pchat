@@ -9,8 +9,9 @@ A Holepunch based p2p chat application
 5. Start sending messages from react frontend
 6. Messages for react + node instance will be received in console.
 
-# Functionalities
+# Functionalities/To Do
 - [X] Connect users by topic
 - [X] P2P Communication
 - [X] Hyperstore to store messages
 - [ ] Reflection of messages in React frontend (Have to fix, temporary fix: console)
+- [ ] Deployment

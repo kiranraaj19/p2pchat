@@ -44,6 +44,7 @@ function App() {
       const interval = setInterval(() => {
       axios.get("https://p2pchat-api.vercel.app/getmessages")
       .then(res => {setChat(res.data.messages);console.log(chat)})
+      .catch(error => console.log(error))
   }, 3000);
   return () => clearInterval(interval);
 }, []);

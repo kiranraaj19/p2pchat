@@ -14,7 +14,11 @@ const app = express()
 const port = process.env.PORT || 5000;
 
 // middleware
-app.use(cors());
+app.use(cors({
+  origin: ["https://p2pchat-frontend.vercel.app/"],
+  methods: ["POST","GET"],
+  credentials: true
+}));
 app.use(bodyParser.json());
 
 // Keep track of all connections and console.log incoming data
